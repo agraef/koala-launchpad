@@ -1,0 +1,830 @@
+{
+	"mappings": [
+		{
+			"channel": 10,
+			"identifier": "seq 4",
+			"isButton": true,
+			"isCC": false,
+			"value": 52
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 12",
+			"isButton": true,
+			"isCC": false,
+			"value": 52
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 20",
+			"isButton": true,
+			"isCC": false,
+			"value": 52
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 28",
+			"isButton": true,
+			"isCC": false,
+			"value": 52
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 5",
+			"isButton": true,
+			"isCC": false,
+			"value": 53
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 13",
+			"isButton": true,
+			"isCC": false,
+			"value": 53
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 21",
+			"isButton": true,
+			"isCC": false,
+			"value": 53
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 29",
+			"isButton": true,
+			"isCC": false,
+			"value": 53
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 6",
+			"isButton": true,
+			"isCC": false,
+			"value": 54
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 14",
+			"isButton": true,
+			"isCC": false,
+			"value": 54
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 22",
+			"isButton": true,
+			"isCC": false,
+			"value": 54
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 30",
+			"isButton": true,
+			"isCC": false,
+			"value": 54
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 7",
+			"isButton": true,
+			"isCC": false,
+			"value": 55
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 15",
+			"isButton": true,
+			"isCC": false,
+			"value": 55
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 23",
+			"isButton": true,
+			"isCC": false,
+			"value": 55
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 31",
+			"isButton": true,
+			"isCC": false,
+			"value": 55
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 0",
+			"isButton": true,
+			"isCC": false,
+			"value": 56
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 8",
+			"isButton": true,
+			"isCC": false,
+			"value": 56
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 16",
+			"isButton": true,
+			"isCC": false,
+			"value": 56
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 24",
+			"isButton": true,
+			"isCC": false,
+			"value": 56
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 1",
+			"isButton": true,
+			"isCC": false,
+			"value": 57
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 9",
+			"isButton": true,
+			"isCC": false,
+			"value": 57
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 17",
+			"isButton": true,
+			"isCC": false,
+			"value": 57
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 25",
+			"isButton": true,
+			"isCC": false,
+			"value": 57
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 2",
+			"isButton": true,
+			"isCC": false,
+			"value": 58
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 10",
+			"isButton": true,
+			"isCC": false,
+			"value": 58
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 18",
+			"isButton": true,
+			"isCC": false,
+			"value": 58
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 26",
+			"isButton": true,
+			"isCC": false,
+			"value": 58
+		},
+		{
+			"channel": 10,
+			"identifier": "seq 3",
+			"isButton": true,
+			"isCC": false,
+			"value": 59
+		},
+		{
+			"channel": 11,
+			"identifier": "seq 11",
+			"isButton": true,
+			"isCC": false,
+			"value": 59
+		},
+		{
+			"channel": 12,
+			"identifier": "seq 19",
+			"isButton": true,
+			"isCC": false,
+			"value": 59
+		},
+		{
+			"channel": 13,
+			"identifier": "seq 27",
+			"isButton": true,
+			"isCC": false,
+			"value": 59
+		},
+		{
+			"channel": 16,
+			"identifier": "solo",
+			"isButton": true,
+			"isCC": false,
+			"value": 73
+		},
+		{
+			"channel": 16,
+			"identifier": "mute",
+			"isButton": true,
+			"isCC": false,
+			"value": 74
+		},
+		{
+			"channel": 16,
+			"identifier": "rec",
+			"isButton": true,
+			"isCC": false,
+			"value": 78
+		},
+		{
+			"channel": 16,
+			"identifier": "play",
+			"isButton": true,
+			"isCC": false,
+			"value": 79
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer vol 0",
+			"isButton": false,
+			"isCC": true,
+			"value": 21
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer vol 1",
+			"isButton": false,
+			"isCC": true,
+			"value": 22
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer vol 2",
+			"isButton": false,
+			"isCC": true,
+			"value": 23
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer vol 3",
+			"isButton": false,
+			"isCC": true,
+			"value": 24
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer vol -1",
+			"isButton": false,
+			"isCC": true,
+			"value": 25
+		},
+		{
+			"channel": 16,
+			"identifier": "VOL",
+			"isButton": false,
+			"isCC": true,
+			"value": 30
+		},
+		{
+			"channel": 16,
+			"identifier": "PITCH",
+			"isButton": false,
+			"isCC": true,
+			"value": 31
+		},
+		{
+			"channel": 16,
+			"identifier": "PAN",
+			"isButton": false,
+			"isCC": true,
+			"value": 32
+		},
+		{
+			"channel": 16,
+			"identifier": "sampleStart",
+			"isButton": false,
+			"isCC": true,
+			"value": 36
+		},
+		{
+			"channel": 16,
+			"identifier": "sampleLength",
+			"isButton": false,
+			"isCC": true,
+			"value": 37
+		},
+		{
+			"channel": 16,
+			"identifier": "fx CRUSH",
+			"isButton": false,
+			"isCC": true,
+			"value": 39
+		},
+		{
+			"channel": 16,
+			"identifier": "fx PITCH",
+			"isButton": false,
+			"isCC": true,
+			"value": 40
+		},
+		{
+			"channel": 16,
+			"identifier": "fx COMB",
+			"isButton": false,
+			"isCC": true,
+			"value": 41
+		},
+		{
+			"channel": 16,
+			"identifier": "fx RING",
+			"isButton": false,
+			"isCC": true,
+			"value": 42
+		},
+		{
+			"channel": 16,
+			"identifier": "fx REVERB",
+			"isButton": false,
+			"isCC": true,
+			"value": 43
+		},
+		{
+			"channel": 16,
+			"identifier": "fx STUTTER",
+			"isButton": false,
+			"isCC": true,
+			"value": 44
+		},
+		{
+			"channel": 16,
+			"identifier": "fx GATE",
+			"isButton": false,
+			"isCC": true,
+			"value": 45
+		},
+		{
+			"channel": 16,
+			"identifier": "fx FILTER",
+			"isButton": false,
+			"isCC": true,
+			"value": 46
+		},
+		{
+			"channel": 16,
+			"identifier": "fx CUTTER",
+			"isButton": false,
+			"isCC": true,
+			"value": 48
+		},
+		{
+			"channel": 16,
+			"identifier": "fx REVERSE",
+			"isButton": false,
+			"isCC": true,
+			"value": 49
+		},
+		{
+			"channel": 16,
+			"identifier": "fx DUB",
+			"isButton": false,
+			"isCC": true,
+			"value": 50
+		},
+		{
+			"channel": 16,
+			"identifier": "fx TEMPO DELAY",
+			"isButton": false,
+			"isCC": true,
+			"value": 51
+		},
+		{
+			"channel": 16,
+			"identifier": "fx TALKBOX",
+			"isButton": false,
+			"isCC": true,
+			"value": 52
+		},
+		{
+			"channel": 16,
+			"identifier": "fx VIBROFLANGE",
+			"isButton": false,
+			"isCC": true,
+			"value": 53
+		},
+		{
+			"channel": 16,
+			"identifier": "fx DIRTY",
+			"isButton": false,
+			"isCC": true,
+			"value": 54
+		},
+		{
+			"channel": 16,
+			"identifier": "fx COMPRESSOR",
+			"isButton": false,
+			"isCC": true,
+			"value": 55
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer solo 0",
+			"isButton": true,
+			"isCC": true,
+			"value": 57
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer solo 1",
+			"isButton": true,
+			"isCC": true,
+			"value": 58
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer solo 2",
+			"isButton": true,
+			"isCC": true,
+			"value": 59
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer solo 3",
+			"isButton": true,
+			"isCC": true,
+			"value": 60
+		},
+		{
+			"channel": 1,
+			"identifier": "fxHold",
+			"isButton": true,
+			"isCC": true,
+			"value": 64
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer mute 0",
+			"isButton": true,
+			"isCC": true,
+			"value": 65
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer mute 1",
+			"isButton": true,
+			"isCC": true,
+			"value": 66
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer mute 2",
+			"isButton": true,
+			"isCC": true,
+			"value": 67
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer mute 3",
+			"isButton": true,
+			"isCC": true,
+			"value": 68
+		},
+		{
+			"channel": 16,
+			"identifier": "mixer mute -1",
+			"isButton": true,
+			"isCC": true,
+			"value": 69
+		}
+	],
+	"pads": [
+		{
+			"channel": 10,
+			"note": 36,
+			"pad": 12
+		},
+		{
+			"channel": 11,
+			"note": 36,
+			"pad": 28
+		},
+		{
+			"channel": 12,
+			"note": 36,
+			"pad": 44
+		},
+		{
+			"channel": 13,
+			"note": 36,
+			"pad": 60
+		},
+		{
+			"channel": 10,
+			"note": 37,
+			"pad": 13
+		},
+		{
+			"channel": 11,
+			"note": 37,
+			"pad": 29
+		},
+		{
+			"channel": 12,
+			"note": 37,
+			"pad": 45
+		},
+		{
+			"channel": 13,
+			"note": 37,
+			"pad": 61
+		},
+		{
+			"channel": 10,
+			"note": 38,
+			"pad": 14
+		},
+		{
+			"channel": 11,
+			"note": 38,
+			"pad": 30
+		},
+		{
+			"channel": 12,
+			"note": 38,
+			"pad": 46
+		},
+		{
+			"channel": 13,
+			"note": 38,
+			"pad": 62
+		},
+		{
+			"channel": 10,
+			"note": 39,
+			"pad": 15
+		},
+		{
+			"channel": 11,
+			"note": 39,
+			"pad": 31
+		},
+		{
+			"channel": 12,
+			"note": 39,
+			"pad": 47
+		},
+		{
+			"channel": 13,
+			"note": 39,
+			"pad": 63
+		},
+		{
+			"channel": 10,
+			"note": 40,
+			"pad": 8
+		},
+		{
+			"channel": 11,
+			"note": 40,
+			"pad": 24
+		},
+		{
+			"channel": 12,
+			"note": 40,
+			"pad": 40
+		},
+		{
+			"channel": 13,
+			"note": 40,
+			"pad": 56
+		},
+		{
+			"channel": 10,
+			"note": 41,
+			"pad": 9
+		},
+		{
+			"channel": 11,
+			"note": 41,
+			"pad": 25
+		},
+		{
+			"channel": 12,
+			"note": 41,
+			"pad": 41
+		},
+		{
+			"channel": 13,
+			"note": 41,
+			"pad": 57
+		},
+		{
+			"channel": 10,
+			"note": 42,
+			"pad": 10
+		},
+		{
+			"channel": 11,
+			"note": 42,
+			"pad": 26
+		},
+		{
+			"channel": 12,
+			"note": 42,
+			"pad": 42
+		},
+		{
+			"channel": 13,
+			"note": 42,
+			"pad": 58
+		},
+		{
+			"channel": 10,
+			"note": 43,
+			"pad": 11
+		},
+		{
+			"channel": 11,
+			"note": 43,
+			"pad": 27
+		},
+		{
+			"channel": 12,
+			"note": 43,
+			"pad": 43
+		},
+		{
+			"channel": 13,
+			"note": 43,
+			"pad": 59
+		},
+		{
+			"channel": 10,
+			"note": 44,
+			"pad": 4
+		},
+		{
+			"channel": 11,
+			"note": 44,
+			"pad": 20
+		},
+		{
+			"channel": 12,
+			"note": 44,
+			"pad": 36
+		},
+		{
+			"channel": 13,
+			"note": 44,
+			"pad": 52
+		},
+		{
+			"channel": 10,
+			"note": 45,
+			"pad": 5
+		},
+		{
+			"channel": 11,
+			"note": 45,
+			"pad": 21
+		},
+		{
+			"channel": 12,
+			"note": 45,
+			"pad": 37
+		},
+		{
+			"channel": 13,
+			"note": 45,
+			"pad": 53
+		},
+		{
+			"channel": 10,
+			"note": 46,
+			"pad": 6
+		},
+		{
+			"channel": 11,
+			"note": 46,
+			"pad": 22
+		},
+		{
+			"channel": 12,
+			"note": 46,
+			"pad": 38
+		},
+		{
+			"channel": 13,
+			"note": 46,
+			"pad": 54
+		},
+		{
+			"channel": 10,
+			"note": 47,
+			"pad": 7
+		},
+		{
+			"channel": 11,
+			"note": 47,
+			"pad": 23
+		},
+		{
+			"channel": 12,
+			"note": 47,
+			"pad": 39
+		},
+		{
+			"channel": 13,
+			"note": 47,
+			"pad": 55
+		},
+		{
+			"channel": 10,
+			"note": 48,
+			"pad": 0
+		},
+		{
+			"channel": 11,
+			"note": 48,
+			"pad": 16
+		},
+		{
+			"channel": 12,
+			"note": 48,
+			"pad": 32
+		},
+		{
+			"channel": 13,
+			"note": 48,
+			"pad": 48
+		},
+		{
+			"channel": 10,
+			"note": 49,
+			"pad": 1
+		},
+		{
+			"channel": 11,
+			"note": 49,
+			"pad": 17
+		},
+		{
+			"channel": 12,
+			"note": 49,
+			"pad": 33
+		},
+		{
+			"channel": 13,
+			"note": 49,
+			"pad": 49
+		},
+		{
+			"channel": 10,
+			"note": 50,
+			"pad": 2
+		},
+		{
+			"channel": 11,
+			"note": 50,
+			"pad": 18
+		},
+		{
+			"channel": 12,
+			"note": 50,
+			"pad": 34
+		},
+		{
+			"channel": 13,
+			"note": 50,
+			"pad": 50
+		},
+		{
+			"channel": 10,
+			"note": 51,
+			"pad": 3
+		},
+		{
+			"channel": 11,
+			"note": 51,
+			"pad": 19
+		},
+		{
+			"channel": 12,
+			"note": 51,
+			"pad": 35
+		},
+		{
+			"channel": 13,
+			"note": 51,
+			"pad": 51
+		}
+	]
+}

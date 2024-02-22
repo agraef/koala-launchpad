@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aj-snapshot>
+<!--
+This is basically the same as koala-sampler.xml, but deals with 3 Pd MIDI
+inputs and outputs, which is useful if you want to hook up a secondary
+controller such as the Launch Control XL alongside the APC mini or the
+Launchpad. This requires that you have set up Pd with 3 ALSA MIDI inputs and
+outputs, as follows:
+
+pd -alsamidi -mididev 0,1,2
+
+This should create the 'Pure Data' ALSA MIDI client for both input and output,
+with ports 0, 1, and 2 as writable (Pd input) and ports 3, 4, and 5 as
+readable (Pd output) ports. (This is what the snapshot assumes, otherwise you
+may have to change the Pd client names and port numbers below accordingly.)
+-->
+<alsa>
+  <!-- This should work with either the mk1 or mk2 version of the APC mini.
+       CAVEAT: Don't try to mix both types of devices, otherwise the
+       koala-sampler.pd patch will get confused about the type of device it is
+       connected to. The mk1 and mk2 versions are *not* compatible! -->
+  <client name="APC MINI">
+    <port id="0">
+      <connection client="Pure Data" port="0" />
+    </port>
+  </client>
+  <client name="APC mini mk2">
+    <port id="0">
+      <connection client="Pure Data" port="0" />
+    </port>
+    <port id="1">
+      <connection client="Pure Data" port="1" />
+    </port>
+  </client>
+  <!-- Launchpad Pro MK3 connections, for the Launchpad variant of the
+       patch. -->
+  <client name="Launchpad Pro MK3">
+    <port id="0">
+      <connection client="Pure Data" port="1" />
+    </port>
+    <port id="2">
+      <connection client="Pure Data" port="0" />
+    </port>
+  </client>
+  <!-- Launch Control XL connections, for the Launch Control variant of the
+       patch. -->
+  <client name="Launch Control XL">
+    <port id="0">
+      <connection client="Pure Data" port="2" />
+    </port>
+  </client>
+  <client name="Pure Data">
+    <port id="3">
+      <connection client="APC MINI" port="0" />
+    </port>
+    <port id="3">
+      <connection client="APC mini mk2" port="0" />
+    </port>
+    <port id="3">
+      <connection client="Launchpad Pro MK3" port="0" />
+      <connection client="Launchpad Pro MK3" port="2" />
+    </port>
+    <port id="5">
+      <connection client="Launch Control XL" port="0" />
+    </port>
+    <!-- This connection makes sure that the patch can output data to Koala
+         which uses RtMidi on Linux. CAVEAT: If you have other applications
+         using the same generic "RtMidi Input Client" name, then the following
+         rule may connect to the wrong one, and you may have to correct the
+         connection manually. -->
+    <port id="4">
+      <connection client="RtMidi Input Client" port="0" />
+    </port>
+  </client>
+  <!-- If you have any other devices that should be connected directly to
+       Koala, you can add them here. As examples I have included the Novation
+       Launchkey Mini mk3 and various AKAI MPK mini keyboards. -->
+  <client name="Launchkey Mini MK3">
+    <port id="0">
+      <connection client="RtMidi Input Client" port="0" />
+    </port>
+    <port id="1" />
+  </client>
+  <client name="MPK mini Plus">
+    <port id="0">
+      <connection client="RtMidi Input Client" port="0" />
+    </port>
+    <port id="1" />
+  </client>
+  <client name="MPK mini 2">
+    <port id="0">
+      <connection client="RtMidi Input Client" port="0" />
+    </port>
+  </client>
+  <client name="MPK mini 3">
+    <port id="0">
+      <connection client="RtMidi Input Client" port="0" />
+    </port>
+  </client>
+</alsa>
+</aj-snapshot>
