@@ -51,7 +51,7 @@ The koala-launchcontrol.pd patch can be used either as a companion for koala-lau
 The controls are set up in a similar vein as the Launchpad, as follows:
 
 - Faders: The first 4 faders control the corresponding volume sliders of bus 1-4 in the Koala mixer on the PERFORM page. The fifth fader controls the volume slider of the main bus.
-- Pan/Device: The first three encoders in the 3rd row control Koala's VOL, PITCH, and PAN knobs on the SAMPLE page. The 7th and 8th faders control sample start and length in the sample editor.
+- Pan/Device: The first three encoders in the 3rd row control Koala's VOL, PITCH, and PAN knobs on the SAMPLE page. The 7th and 8th encoders control sample start and length in the sample editor.
 - Send A, Send B: The 8 encoders in the 1st and 2nd rows control the VANILLA and STRAWBERRY performance effects on the PERFORM page, respectively.
 - You can press and hold the Mute and Solo buttons while pressing any of the channel (1-8) buttons in the bottom row to mute or solo the corresponding mixer tracks.
 
