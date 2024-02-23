@@ -1,0 +1,11 @@
+I: text "Launchpad MIDI 1" rjust "Launchpad DAW 1" rjust "" rjust "Launch Control XL 3" rjust
+B: box "Pd"
+O: text "1 Launchpad MIDI" ljust "1 Launchpad DAW" ljust "2 Koala Sampler" ljust "3 Launch Control XL" ljust
+
+arrow from I.e+(-.5,.2) to B.w+(0,.2)
+arrow from I.e+(-.5,.05) to B.w+(0,.2)
+arrow from I.e+(-.5,-.2) to B.w+(0,-.2)
+arrow from B.e+(0,.2) to O.w+(.5,.2)
+arrow from B.e+(0,.2) to O.w+(.5,.05)
+arrow from B.e+(0,-.07) to O.w+(.5,-.07)
+arrow from B.e+(0,-.2) to O.w+(.5,-.2)

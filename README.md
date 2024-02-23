@@ -8,13 +8,15 @@ These Pd patches implement control surfaces for Marek Bereza's popular [Koala Sa
 
 For the Launchpad, you need to connect Pd's *first* MIDI input and output port to *both* the Launchpad's MIDI and DAW outputs and inputs, respectively. For the Launch Control XL, connect Pd's *third* MIDI input and output port to the Launch Control's *first* MIDI output and input ports.
 
-You'll also have to connect Pd's *second* MIDI output port to Koala's MIDI input port. The details are somewhat intricate and depend on the way that you run Koala and how it's connected to your host system. Please check the [koala-sampler.md](https://github.com/agraef/apcmini/blob/main/koala-sampler.md) file for more elaborate instructions. Basically, you need to set up a MIDI port on you host system which connects to Koala via USB, Bluetooth, RTP, or a local MIDI loopback and then connect Pd's second MIDI output to that port. On Linux, it is even possible to run the [Linux version of Koala](https://www.elf-audio.com/koala/linux.php) on the host system and hook it up to Pd locally; we sketch out how to do this in the "Koala Sampler on Linux" section below.
+You'll also have to connect Pd's *second* MIDI output port to Koala's MIDI input port. The details are somewhat intricate and depend on the way that you run Koala and how it's connected to your host system. Please check the [koala-sampler.md](https://github.com/agraef/apcmini/blob/main/koala-sampler.md) file for more elaborate instructions. Basically, you need to set up a MIDI port on your host system which connects to Koala via USB, Bluetooth, RTP, or a local MIDI loopback and then connect Pd's second MIDI output to that port. On Linux, it is even possible to run the [Linux version of Koala](https://www.elf-audio.com/koala/linux.php) on the host system and hook it up to Pd locally; we sketch out how to do this in the "Tips and Tricks" section below.
+
+### Koala MIDI mapping
 
 The Koala MIDI mapping is the same as with the APC mini koala-sampler.pd patch and can be found in the etc/midiMapping.json file. You'll need to copy this to the location on your device where Koala keeps its configuration data (on Android this is usually in /Android/data/com.elf.koalasampler/files/settings, on Linux and macOS you can find the configuration data in the Documents/Koala folder). This has all the pads, faders, and buttons already set up so that, once you enable MIDI mapping in Koala's settings, the controls will work as described below. Again, a complete list of the MIDI mapping can be found in the [koala-sampler.md](https://github.com/agraef/apcmini/blob/main/koala-sampler.md) file.
 
 ## Launchpad
 
-Open the koala-launch.pd patch and check the big green toggle to put the Launchpad into DAW mode. When the patch launches, it will be in drum mode. The pads are laid out in four 4x4 grids (banks A, B, C, D in Koala) in different colors, as follows:
+Open the koala-launch.pd patch and check the big green toggle to put the Launchpad into DAW mode and initialize the Launchpad for use with Koala Sampler. When the patch launches, it will be in drum mode. The pads are laid out in four 4x4 grids (banks A, B, C, D in Koala) in different colors, as follows:
 
 > B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D
 >
@@ -59,9 +61,23 @@ Finally, you can also use the two button rows at the bottom as a little clip lau
 
 **NOTE:** This patch is self-contained and thus can also be used alongside the koala-sampler.pd patch from the [apcmini](https://github.com/agraef/apcmini) package, using the AKAI APC mini in lieu of the Novation Launchpad for triggering samples and sequences in Koala. Both combos make for a nice Koala control surface. Note, however, that at present you can't run koala-launchpad.pd together with koala-sampler.pd, as these patches employ the same Pd MIDI input and output ports and will thus interfere with each other.
 
-## Koala Sampler on Linux
+## Tips and Tricks
 
-As far as I'm aware, this method only works on Linux right now. The problem is that Koala insists on connecting to *all* available MIDI inputs. It goes without saying that this kind of setup can easily wreak havoc if you run Koala locally on the same system as Pd, because Koala sees a whole lot of additional MIDI data that may interfere with the MIDI data from the Pd patch that it is intended to see.
+### Getting the MIDI connections right
+
+If something doesn't work right (like controllers not initializing properly, or MIDI input from the controller seemingly not triggering the expected actions in Koala Sampler), it's usually an issue with the MIDI connections, so you'll have to double-check those. As far as I can tell there's currently no way to automate the device configuration in Pd, and Pd doesn't provide a built-in MIDI patchbay either, so you'll just have to bite the bullet and do this manually.
+
+A picture is worth a thousand words, so here is how your MIDI connections should look like (the numbers 1, 2, 3 refer to Pd's input and output port numbers):
+
+![conn](pic/conn.png)
+
+This can be a bit tricky to get right when doing it for the first time. One complication is that you'll need to use MIDI loopbacks and a MIDI patchbay program to get multiple devices hooked up to Pd's first MIDI input and output. For this we recommend [QjackCtl](https://qjackctl.sourceforge.io/) on Linux, [MidiPipe](http://www.subtlesoft.square7.net/MidiPipe.html) on macOS, and [MIDI-OX](http://www.midiox.com/) on Windows. These all let you store your setup for recalling it later. On Mac, you'll also have to create some [IAC devices](https://support.apple.com/guide/audio-midi-setup/ams1013/mac) to be used as loopbacks, on Windows this can be achieved with Tobias Erichsen's [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html).
+
+Another quirk on Mac and Windows is that in order to set Pd's *third* input port to the Launch Control XL, you'll also have to configure the *second* MIDI input device, even though it's not needed for the patch to work, so just set it to some dummy loopback device. (Don't ask. That's just the way Pd's MIDI device setup works, has always been that way.)
+
+### Koala Sampler on Linux
+
+Here is how to run Koala alongside Pd on the same system. As far as I'm aware, this method only works on Linux right now. The problem is that Koala insists on connecting to *all* available MIDI inputs. It goes without saying that this kind of setup can easily wreak havoc if you run Koala locally on the same system as Pd, because Koala sees a whole lot of additional MIDI data that may interfere with the MIDI data from the Pd patch that it is intended to see.
 
 On Linux, it is possible to work around this obstacle, because ALSA has utilities to control exactly which MIDI devices a running application is connected to. Thus, on Linux you want to disable all of Koala's ALSA MIDI input connections except the connection to Pd's second output port. The most convenient way to achieve this is to use the [aj-snapshot](https://aj-snapshot.sourceforge.io/) program with the koala-alsa.xml snapshot file included in the distribution. Basically, after launching Koala just run `aj-snapshot -rax koala-alsa.xml` in the terminal and you should be set. Note that you'll have to re-run this command every time you launch Koala. Please check the snapshot file for details; you may also want to edit this file to adjust it to your setup.
 
