@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' class="pikchr" viewBox="0 0 597.658 115.2">
+<text x="160.099" y="17.28" text-anchor="end" fill="rgb(0,0,0)" dominant-baseline="central">Launchpad MIDI</text>
+<text x="160.099" y="37.44" text-anchor="end" fill="rgb(0,0,0)" dominant-baseline="central">Launchpad DAW</text>
+<text x="160.099" y="57.6" text-anchor="end" fill="rgb(0,0,0)" dominant-baseline="central"></text>
+<text x="160.099" y="75.744" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central"></text>
+<text x="160.099" y="93.888" text-anchor="end" fill="rgb(0,0,0)" dominant-baseline="central">Launch Control XL</text>
+<path d="M244.829,93.6L352.829,93.6L352.829,21.6L244.829,21.6Z"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="298.829" y="57.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="125%" dominant-baseline="central">Pd</text>
+<text x="437.558" y="17.28" text-anchor="start" fill="rgb(0,0,0)" dominant-baseline="central">Launchpad MIDI</text>
+<text x="437.558" y="37.44" text-anchor="start" fill="rgb(0,0,0)" dominant-baseline="central">Launchpad DAW</text>
+<text x="437.558" y="57.6" text-anchor="start" font-style="italic" fill="rgb(0,0,0)" dominant-baseline="central">Koala Sampler</text>
+<text x="437.558" y="75.744" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central"></text>
+<text x="437.558" y="93.888" text-anchor="start" fill="rgb(0,0,0)" dominant-baseline="central">Launch Control XL</text>
+<circle cx="244.829" cy="21.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="244.829" y="21.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">1</text>
+<circle cx="244.829" cy="57.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="244.829" y="57.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">2</text>
+<circle cx="244.829" cy="93.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="244.829" y="93.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">3</text>
+<circle cx="352.829" cy="21.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="352.829" y="21.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">1</text>
+<circle cx="352.829" cy="57.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="352.829" y="57.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">2</text>
+<circle cx="352.829" cy="93.6" r="10.08"  style="fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);" />
+<text x="352.829" y="93.6" text-anchor="middle" fill="rgb(0,0,0)" font-size="80%" dominant-baseline="central">3</text>
+<polygon points="234.749,21.6 223.229,25.92 223.229,17.28" style="fill:rgb(0,0,0)"/>
+<path d="M172.829,21.6L228.989,21.6"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="234.749,21.6 224.814,28.8576 222.492,20.5356" style="fill:rgb(0,0,0)"/>
+<path d="M172.829,38.88L229.201,23.1483"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="234.749,93.6 223.229,97.92 223.229,89.28" style="fill:rgb(0,0,0)"/>
+<path d="M172.829,93.6L228.989,93.6"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="424.829,21.6 413.309,25.92 413.309,17.28" style="fill:rgb(0,0,0)"/>
+<path d="M362.909,21.6L419.069,21.6"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="424.829,38.88 412.572,39.9444 414.894,31.6224" style="fill:rgb(0,0,0)"/>
+<path d="M362.909,21.6L419.281,37.3317"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="424.829,57.6 413.309,61.92 413.309,53.28" style="fill:rgb(0,0,0)"/>
+<path d="M362.909,57.6L419.069,57.6"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+<polygon points="424.829,93.6 413.309,97.92 413.309,89.28" style="fill:rgb(0,0,0)"/>
+<path d="M362.909,93.6L419.069,93.6"  style="fill:none;stroke-width:2.16;stroke:rgb(0,0,0);" />
+</svg>
+

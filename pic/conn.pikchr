@@ -1,11 +1,21 @@
-I: text "Launchpad MIDI 1" rjust "Launchpad DAW 1" rjust "" rjust "Launch Control XL 3" rjust
-B: box "Pd"
-O: text "1 Launchpad MIDI" ljust "1 Launchpad DAW" ljust "2 Koala Sampler" ljust "3 Launch Control XL" ljust
+// koala-launchpad MIDI inputs and outputs
 
-arrow from I.e+(-.5,.2) to B.w+(0,.2)
-arrow from I.e+(-.5,.05) to B.w+(0,.2)
-arrow from I.e+(-.5,-.2) to B.w+(0,-.2)
-arrow from B.e+(0,.2) to O.w+(.5,.2)
-arrow from B.e+(0,.2) to O.w+(.5,.05)
-arrow from B.e+(0,-.07) to O.w+(.5,-.07)
-arrow from B.e+(0,-.2) to O.w+(.5,-.2)
+I: text "Launchpad MIDI" rjust "Launchpad DAW" rjust "" rjust "" small "Launch Control XL" rjust
+B: box "Pd" big
+O: text "Launchpad MIDI" ljust "Launchpad DAW" ljust "Koala Sampler" italic ljust "" small "Launch Control XL" ljust
+
+circle "1" small rad 0.07 fill white at B.nw
+circle "2" small rad 0.07 fill white at B.w
+circle "3" small rad 0.07 fill white at B.sw
+
+circle "1" small rad 0.07 fill white at B.ne
+circle "2" small rad 0.07 fill white at B.e
+circle "3" small rad 0.07 fill white at B.se
+
+arrow from I.e+(-.5,.25) to B.w+(-.07,.25)
+arrow from I.e+(-.5,.13) to B.w+(-.07,.25)
+arrow from I.e+(-.5,-.25) to B.w+(-.07,-.25)
+arrow from B.e+(0.07,.25) to O.w+(.5,.25)
+arrow from B.e+(0.07,.25) to O.w+(.5,.13)
+arrow from B.e+(0.07,0) to O.w+(.5,0)
+arrow from B.e+(0.07,-.25) to O.w+(.5,-.25)

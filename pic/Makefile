@@ -1,7 +1,7 @@
 
-# This needs pikchr (https://pikchr.org) and ImageMagick (convert).
+# This needs pikchr (https://pikchr.org) and (optionally) ImageMagick (convert).
 
-all: conn.png
+all: conn.svg
 
 %.svg: %.pikchr
 	pikchr --svg-only $< > $@
