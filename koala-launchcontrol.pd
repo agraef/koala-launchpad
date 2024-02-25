@@ -486,6 +486,7 @@ sample and performance controls, f 44;
 #X text 30 20 Launch Control XL: Connect to Pd MIDI input and output
 #3 and use factory template #1., f 53;
 #X obj 200 330 declare -path lib;
+#X obj 230 230 patchbay;
 #X connect 0 0 1 0;
 #X connect 7 0 4 0;
 #X connect 8 0 4 0;
