@@ -75,7 +75,7 @@ It's good to stick to the default setup described above if you can, since this m
 
 The MIDI patchbay is available as a subpatch in both the koala-launchpad and koala-launchcontrol patches. Simply click on the patch to open it, or you can also open lib/patchbay.pd directly in Pd if you want to set up things beforehand. Here's how it looks like:
 
-![patchbay](pic/patchbay.png)
+<img src="pic/patchbay.png" alt="patchbay" style="zoom: 67%;" />
 
 The individual mappings are set using the two grids in the upper half of the patch. On both the input and the output side, the rows represent the different internal "device ports" as the patches see them, while the columns represent the actual Pd port numbers they are assigned to. You can also click on the first (unlabeled) row in a column to have input from or output to that Pd port disabled.
 
@@ -83,11 +83,11 @@ In the lower half there are two useful presets you can choose. "Linux" matches t
 
 Conversely, the "Mac/Windows" preset changes to an alternative port mapping:
 
-![patchbay](pic/patchbay-mac.png)
+<img src="pic/patchbay-mac.png" alt="patchbay" style="zoom:67%;" />
 
 In this setup the Launchpad connects to *both* port 1 and 2, on both input and output, while the Launch Control XL and Koala utilize the remaining ports. In Pd's MIDI setup, you'd connect the Launchpad MIDI and DAW ports to port 1 and 2, respectively, on both input and output. Input port 3 gets connected to the Launch Control, while output ports 3 and 4 are connected to Koala and the Launch Control, respectively:
 
-<img src="pic/connections-mac.png" alt="connections-mac" style="zoom:70%;" />
+<img src="pic/connections-mac.png" alt="connections-mac" style="zoom: 50%;" />
 
 This alleviates the need for messing around with loopback devices and external patchbays, and thus makes things a lot easier on Mac and Windows.
 
@@ -95,7 +95,7 @@ Of course, you could also use this setup on Linux, but on Linux you have to conn
 
 You can also change the port mapping yourself in the upper half by just clicking on the various radio controls. For instance, if you only want to use the Launch Control XL, then you might as well disable the Launchpad ports and assign the Launch Control to input and output port 1, as follows:
 
-![patchbay](pic/patchbay-launchcontrol.png)
+<img src="pic/patchbay-launchcontrol.png" alt="patchbay" style="zoom:67%;" />
 
 Then you set Pd's input and output port 1 to the Launch Control XL and output port 2 to Koala and away you go.
 
