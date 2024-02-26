@@ -1,9 +1,9 @@
 #N canvas 929 406 441 223 12;
-#X obj 180 150 hradio 15 0 0 2 empty empty empty 0 -8 0 10 #fcfcfc
+#X obj 120 150 hradio 15 0 0 2 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X text 130 149 Linux;
-#X text 220 149 Mac/Windows;
-#N canvas 650 501 438 406 presets 0;
+#X text 70 149 Linux;
+#X text 160 149 Mac/Windows;
+#N canvas 890 481 543 403 presets 0;
 #X text 144 166 Presets;
 #X obj 150 70 sel 0 1;
 #X obj 20 20 inlet;
@@ -27,6 +27,73 @@
 #X msg 80 146 \; i1 1 \; i2 1 \; i3 3 \; i4 0;
 #X msg 220 146 \; o1 1 \; o2 2 \; o3 3 \; o4 0;
 #X msg 280 146 \; o1 1 \; o2 1 \; o3 2 \; o4 3;
+#X obj 350 20 r save-preset;
+#X obj 370 204 qlist;
+#X msg 370 140 add \$1 \$2;
+#X msg 450 140 clear;
+#X obj 350 49 t b b b b;
+#N canvas 1088 451 450 300 out 0;
+#X obj 20 167 pack s f;
+#X obj 20 80 t b b b b;
+#X obj 20 20 inlet;
+#X obj 20 234 outlet;
+#X obj 20 109 v o4;
+#X obj 70 109 v o3;
+#X obj 120 109 v o2;
+#X obj 170 109 v o1;
+#X msg 20 138 o4 \$1;
+#X msg 70 138 o3 \$1;
+#X msg 120 138 o2 \$1;
+#X msg 170 138 o1 \$1;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 1 2 6 0;
+#X connect 1 3 7 0;
+#X connect 2 0 1 0;
+#X connect 4 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 10 0;
+#X connect 7 0 11 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X restore 370 80 pd out;
+#N canvas 1920 385 450 300 in 0;
+#X obj 20 109 v i4;
+#X obj 70 109 v i3;
+#X obj 120 109 v i2;
+#X obj 170 109 v i1;
+#X msg 20 138 i4 \$1;
+#X msg 70 138 i3 \$1;
+#X msg 120 138 i2 \$1;
+#X msg 170 138 i1 \$1;
+#X obj 20 167 pack s f;
+#X obj 20 80 t b b b b;
+#X obj 20 20 inlet;
+#X obj 20 234 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 0 0;
+#X connect 9 1 1 0;
+#X connect 9 2 2 0;
+#X connect 9 3 3 0;
+#X connect 10 0 9 0;
+#X restore 390 110 pd in;
+#X msg 350 170 write patchbay.txt;
+#X obj 350 260 r load-preset;
+#X obj 460 260 loadbang;
+#X obj 350 289 t b b;
+#X obj 350 350 qlist;
+#X msg 382 320 read patchbay.txt;
 #X connect 1 0 19 0;
 #X connect 1 0 21 0;
 #X connect 1 1 20 0;
@@ -40,22 +107,37 @@
 #X connect 13 0 14 0;
 #X connect 15 0 16 0;
 #X connect 17 0 18 0;
-#X restore 180 180 pd presets;
-#X obj 57 52 vradio 15 0 1 4 i1 i1 empty 0 -8 0 10 #fcfcfc #000000
+#X connect 23 0 27 0;
+#X connect 25 0 24 0;
+#X connect 26 0 24 0;
+#X connect 27 0 30 0;
+#X connect 27 1 28 0;
+#X connect 27 2 29 0;
+#X connect 27 3 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 25 0;
+#X connect 30 0 24 0;
+#X connect 31 0 33 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 1 35 0;
+#X connect 35 0 34 0;
+#X restore 120 180 pd presets;
+#X obj 57 52 vradio 15 0 0 4 i1 i1 empty 0 -8 0 10 #fcfcfc #000000
 #000000 1;
-#X obj 77 52 vradio 15 0 1 4 i2 i2 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 77 52 vradio 15 0 0 4 i2 i2 empty 0 -8 0 10 #fcfcfc #000000
 #000000 0;
-#X obj 97 52 vradio 15 0 1 4 i3 i3 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 97 52 vradio 15 0 0 4 i3 i3 empty 0 -8 0 10 #fcfcfc #000000
 #000000 3;
-#X obj 117 52 vradio 15 0 1 4 i4 i4 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 117 52 vradio 15 0 0 4 i4 i4 empty 0 -8 0 10 #fcfcfc #000000
 #000000 0;
-#X obj 257 52 vradio 15 0 1 4 o1 o1 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 257 52 vradio 15 0 0 4 o1 o1 empty 0 -8 0 10 #fcfcfc #000000
 #000000 1;
-#X obj 277 52 vradio 15 0 1 4 o2 o2 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 277 52 vradio 15 0 0 4 o2 o2 empty 0 -8 0 10 #fcfcfc #000000
 #000000 2;
-#X obj 297 52 vradio 15 0 1 4 o3 o3 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 297 52 vradio 15 0 0 4 o3 o3 empty 0 -8 0 10 #fcfcfc #000000
 #000000 3;
-#X obj 317 52 vradio 15 0 1 4 o4 o4 empty 0 -8 0 10 #fcfcfc #000000
+#X obj 317 52 vradio 15 0 0 4 o4 o4 empty 0 -8 0 10 #fcfcfc #000000
 #000000 0;
 #X text 164 64 Launchpad;
 #X text 147 97 Launch Control;
@@ -70,4 +152,9 @@
 #X text 279 120 2;
 #X text 299 120 3;
 #X text 320 120 4;
+#X text 285 149 User;
+#X obj 257 182 bng 15 250 50 0 save-preset empty Save 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 317 182 bng 15 250 50 0 load-preset empty Load 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 0 0 3 0;
