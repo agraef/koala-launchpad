@@ -9,5 +9,9 @@ all: conn.svg
 %.png: %.svg
 	convert -density 1200 $< $@
 
+# crop screenshots
+crop:
+	for x in patchbay*.png; do cp $$x $$x~; magick $$x -crop +50+80 -crop -100-0 $$x; done
+
 clean:
-	rm -f *.svg *.png
+	rm -f *.svg

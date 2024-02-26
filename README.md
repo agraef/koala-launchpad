@@ -73,25 +73,35 @@ Finally, you can also use the two button rows at the bottom as a little clip lau
 
 It's good to stick to the default setup described above if you can, since this matches how the patches work internally. However, the patches also have a built-in internal MIDI patchbay which makes it possible to change things around if needed.
 
-The MIDI patchbay is available as a subpatch in both the koala-launchpad and koala-launchcontrol patches. Simply click on the `patchbay` subpatch to open it. You can also load lib/patchbay.pd directly in Pd if you want to set up things beforehand. Here's how the patch looks like:
+The MIDI patchbay enables you to adjust the MIDI port mapping to pretty much any MIDI configuration of up to 4 input and output ports that you might use. It is accessible as a subpatch in both the koala-launchpad and koala-launchcontrol patches. Simply click on the `patchbay` subpatch to open it. You can also load lib/patchbay.pd directly in Pd if you want to set up things beforehand.
+
+Here's how the patchbay patch looks like:
 
 <img src="pic/patchbay.png" alt="patchbay" style="zoom: 67%;" />
 
-The individual mappings are set using the two grids of radio controls in the upper half of the patch. On both the input and the output side, the rows represent the different internal "device ports" as the patches see them, while the columns represent the actual Pd port numbers they are assigned to. You can also click on the first (unlabeled) row in a column to have input from or output to that Pd port disabled.
+The individual mappings are set using the two grids of radio controls in the upper half of the patch. On both the input and the output side, the rows represent the different internal "device ports" as the patches see them, while the columns represent the actual Pd port numbers 1-4 they are assigned to. You can also click on the first (unlabeled) row in a column to have input from or output to that Pd port disabled.
 
-In the lower half there are two useful presets you can choose. "Linux" matches the default setup. That is, Launchpad and Launch Control are mapped to Pd's first and third port on both input and output, while the Koala output is mapped to Pd's second output port. In this setup, Pd's input and output port #4 isn't used.
+In the lower half there is another radio control with two predefined presets you can choose, "Linux" and "Mac/Windows". There's also a third "User" preset which can be saved and reloaded; we'll get back to that after discussing the built-in presets.
+
+#### Built-in presets
+
+The "Linux" preset matches the default setup (which also matches the actual internal device routings). That is, Launchpad and Launch Control are mapped to Pd's first and third port on both input and output, while the Koala output is mapped to Pd's second output port. In this setup, Pd's input and output port #4 isn't used at all.
 
 Conversely, the "Mac/Windows" preset changes to an alternative port mapping:
 
 <img src="pic/patchbay-mac.png" alt="patchbay" style="zoom:67%;" />
 
-In this setup the Launchpad connects to *both* port 1 and 2, on both input and output, while the Launch Control XL and Koala utilize the remaining ports. In Pd's MIDI setup, you then connect the Launchpad MIDI and DAW ports to port 1 and 2, respectively, on both input and output. Input port 3 gets connected to the Launch Control, while output ports 3 and 4 are connected to Koala and the Launch Control, respectively. E.g., in Purr Data the MIDI connections look like this on the Mac:
+In this setup the Launchpad connects to *both* port 1 and 2, on both input and output, while the Launch Control XL and Koala utilize the remaining ports. In Pd's MIDI setup, you then connect the Launchpad MIDI and DAW ports to port 1 and 2, respectively, on both input and output. Input port 3 gets connected to the Launch Control, while output ports 3 and 4 are connected to Koala and the Launch Control, respectively. E.g., in Purr Data the MIDI connections would look like this on the Mac:
 
 <img src="pic/connections-mac.png" alt="connections-mac" style="zoom: 50%;" />
 
 This setup has the advantage that you don't have to mess around with loopback devices and external patchbays, which makes things much easier on Mac and Windows. Of course, you could also use this setup on Linux, but there you have to connect the ALSA MIDI devices using a patchbay like [QjackCtl](https://qjackctl.sourceforge.io/) anyway, so you might just as well stick to the default "Linux" setup.
 
-You can also customize the port mapping in the upper half by clicking on the various radio controls. For instance, if you only want to use the Launch Control XL, then you might just disable the Launchpad ports, assign the Launch Control to input and output port 1, and keep the Koala on output port 2, as follows:
+If you want to make this your default setup, simply click the "Mac/Windows" radio button and then the "Save" button, and make sure that you have configured the Pd MIDI ports accordingly. Next time you launch any of the koala-launchpad and koala-launchcontrol patches, the patchbay will be set for you.
+
+#### User-defined presets
+
+You can also customize the port mapping in the upper half to your heart's content by clicking on the various radio controls. For instance, if you only want to use the Launch Control XL, then you might just disable the Launchpad ports, assign the Launch Control to input and output port 1, and keep Koala on output port 2, as follows:
 
 <img src="pic/patchbay-launchcontrol.png" alt="patchbay" style="zoom:67%;" />
 
@@ -103,7 +113,7 @@ Another use case would be the following setup which moves the Launchpad and Laun
 
 In particular, this setup would allow you to use the APC mini (via the koala-sampler patch) alongside both the Launchpad and the Launch Control XL, if you configure Pd's MIDI inputs and outputs accordingly.
 
-In conclusion, the patchbay enables you to adjust the MIDI port mapping to pretty much any MIDI configuration of up to 4 input and output ports that you might use. Once you've set up everything to your liking, you can also save the patchbay.pd patch so that the state of the mapping is recalled the next time you launch any of the koala-launchpad and koala-launchcontrol patches.
+Once you've set up everything to your liking, you can save your custom setup as a user-defined preset by pushing the "Save" button. The state of the mapping will then be recalled the next time you launch any of the koala-launchpad and koala-launchcontrol patches. You can also load the user preset explicitly by pushing the "Load" button, which comes in handy if you messed up your mapping and just want to go back to the previously saved state.
 
 ### Koala Sampler on Linux
 
@@ -115,4 +125,4 @@ We've actually included three different variants of the koala-alsa.xml snapshot 
 
 Note that both koala-alsa.xml and koala-alsa3.xml assume that you stick to the default "Linux" setup for the port mappings. Otherwise you'll have to edit the snapshot files accordingly.
 
-I have tested these setups extensively on Manjaro Linux with the [64 bit Intel version of Koala](https://www.elf-audio.com/koala/linux.php), and I'm optimistic that they will also work on other reasonably new Linux systems, as long as you can get the Koala binary to work. But, as always, your mileage may vary.
+I have tested all these setups extensively on Manjaro Linux with the [64 bit Intel version of Koala](https://www.elf-audio.com/koala/linux.php), and I'm optimistic that they will also work on other reasonably new Linux systems, as long as you can get the Koala binary to work. But, as always, your mileage may vary.
